@@ -1,27 +1,24 @@
 {
-	"name": "lessless",
-	"version": "0.1.0",
-	"author": "Dave Geddes (geddesign.com, twitter.com/geddesign)",
-	"description": "Compiles all your project's LESS into CSS, converts LESS <links> into regular CSS <links>, and removes less.js from your html page."
-	"bin": {
-		"lessless": "./bin/lessless"
-	},
-	"main": "./lib/lessless",
-	"repository": {
-		"type": "git",
-		"url": "https://geddesign@github.com/geddesign/lessless.git"
-	},
-	"keywords": [
+  "author": "Dave Geddes <davidcgeddes@gmail.com> (http://geddesign.com)",
+  "name": "lessless",
+  "description": "Compiles all your project's LESS into CSS, converts LESS <links> into regular CSS <links>, and removes less.js from your html page.",
+	"keywords":[
 		"LESS",
 		"CSS",
 		"compile"
 	],
-	"dependencies": {
-		"less": "1.1.x",
-		"diveSync": "0.2.x"
-	},
-	"license": "MIT",
-	"engine": {
-		"node": ">=0.6"
-	}
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/geddesign/lessless.git"
+  },
+  "main": "./lib/lessless",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+	  "less":"1.1.x",
+	  "diveSync":"0.2.x"
+  },
+  "devDependencies": {}
 }
