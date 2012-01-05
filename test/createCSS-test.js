@@ -57,6 +57,13 @@ describe('adjusting LESS links', function(){
 	});
 
 	describe('stripping out less.js script', function(){
-
+		it('should remove the script tag', function(){
+			var html = "<script src='js/lib/less.js'></script>";
+			expect(html).toMatch(/js\/lib\/less.js/);
+			//strip it out
+			var newHTML = lessless.stripLessJS(html);
+			expect(newHTML).not().toMatch(/js\/lib\/less.js/);
+			expect(newHTML).not().toMatch(/script/);
+		});
 	});
 });
