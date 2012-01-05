@@ -20,5 +20,7 @@
 	  "less":"1.1.x",
 	  "diveSync":"0.2.x"
   },
-  "devDependencies": {}
+	"devDependencies":{
+		"buster":"0.3.x"
+	}
 }
