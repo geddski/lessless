@@ -63,3 +63,7 @@ becomes:
 ```
 
 Give it a try and feel free to post any issues!
+
+## Run The Tests
+`lessless` uses [busterjs](http://busterjs.org) for its tests. To run the tests you need to have buster installed: `npm install buster -g`.
+ Then from the root of the lessless directory: `buster test`. Pull requests with tests are highly appreciated.  
