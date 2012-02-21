@@ -65,5 +65,21 @@ describe('adjusting LESS links', function(){
 			expect(newHTML).not().toMatch(/js\/lib\/less.js/);
 			expect(newHTML).not().toMatch(/script/);
 		});
+		it('should remove versioned and compressed "less" script tags', function() {
+			var html = "<script src='js/lib/less-1.2.1.min.js'></script>";
+			expect(html).toMatch(/js\/lib\/less-1\.2\.1\.min.js/);
+			//shouldn't strip it out
+			var newHTML = lessless.stripLessJS(html);
+			expect(newHTML).not().toMatch(/js\/lib\/less-1\.2\.1\.min.js/);
+			expect(newHTML).not().toMatch(/script/);
+		});
+		it('should not match scripts where "less" is not a standalone word', function() {
+			var html = "<script src='js/lib/boundless.js'></script>";
+			expect(html).toMatch(/js\/lib\/boundless.js/);
+			//shouldn't strip it out
+			var newHTML = lessless.stripLessJS(html);
+			expect(newHTML).toMatch(/js\/lib\/boundless.js/);
+		});
+
 	});
 });
