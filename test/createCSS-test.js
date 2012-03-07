@@ -23,6 +23,22 @@ describe('generating CSS from a LESS file', function(){
   });
 });
 
+describe('specifying paths to CSS folders for less to lookup', function(){
+	before(function () {
+	  var testfile = 'test/testpaths.less';
+	  lessless.createCSS(testfile, ['test/mystyles']);
+	});
+
+	after(function () {
+	  fs.unlinkSync('test/testpaths.css');
+	});
+
+	it('should create CSS file, correctly finding the imported less file', function () {
+	  var file = fs.readFileSync('test/testpaths.css');
+	  expect(file).toBeDefined();
+	});
+});
+
 describe('adjusting LESS links', function(){
 	var origHTML, testFile = "test/test.html";
 
