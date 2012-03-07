@@ -15,9 +15,15 @@ OR
 `lessless`
 
 ### As Module
-```javascript
+```js
 var lessless = require('lessless');
 lessless.optimizeProject('/path/to/project'); //OR process.cwd()
+```
+
+### Optionally specify @import paths
+LESS needs to know where to look when it finds an @import in your less files. The defaults are the root of the project, and a CSS folder. You can add to these default places to look by passing an array of paths as the second parameter: 
+```js
+lessless.optimizeProject('/path/to/project', ['mystyles/less', 'look/here/for/styles/too']);
 ```
 
 ## So What Exactly Does It Do?
