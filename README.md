@@ -26,6 +26,10 @@ LESS needs to know where to look when it finds an @import in your less files. Th
 lessless.optimizeProject('/path/to/project', ['mystyles/less', 'look/here/for/styles/too']);
 ```
 
+### Optionally specify extensions to strip (html is default).
+```js
+lessless.optimizeProject('/path/to/project', ['mystyles/less'], ['jsp', 'cshtml']);
+
 ## So What Exactly Does It Do?
 1. Scans your project for LESS files and generates the appropriate CSS files with the same names. For example if your project has a `styles/main.less`, a `styles/main.css` file will get created (using the [less.js](http://lesscss.org/#-server-side-usage) tool).
 2. Updates any html files to reference the new CSS instead of the LESS.
