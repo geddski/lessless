@@ -20,7 +20,7 @@
     "node": "0.6.x"
   },
   "dependencies": {
-	  "less":"1.1.x",
+	  "less":"1.x.x",
 	  "diveSync":"0.2.x"
   },
 	"devDependencies":{
