@@ -21,14 +21,27 @@ lessless.optimizeProject('/path/to/project'); //OR process.cwd()
 ```
 
 ### Optionally specify @import paths
-LESS needs to know where to look when it finds an @import in your less files. The defaults are the root of the project, and a CSS folder. You can add to these default places to look by passing an array of paths as the second parameter: 
+LESS needs to know where to look when it finds an @import in your less files. The defaults are the root of the project, and a CSS folder. Lessless also automatically adds a less file's path when searching for imports, so that relative paths work without any extra configuration. You can add to these default places to look by passing an array of paths as the second parameter: 
 ```js
 lessless.optimizeProject('/path/to/project', ['mystyles/less', 'look/here/for/styles/too']);
+```
+
+or from the command line (notice you have to use the --styledirs flag multiple times to pass multiple args)
+
+```
+lessless --styledirs /my/styles --styledirs /my/css
 ```
 
 ### Optionally specify extensions to strip (html is default).
 ```js
 lessless.optimizeProject('/path/to/project', ['mystyles/less'], ['jsp', 'cshtml']);
+```
+
+or from the command line (notice you have to use the --strip flag multiple times to pass multiple args)
+
+```
+lessless --strip html --strip jsp
+```
 
 ## So What Exactly Does It Do?
 1. Scans your project for LESS files and generates the appropriate CSS files with the same names. For example if your project has a `styles/main.less`, a `styles/main.css` file will get created (using the [less.js](http://lesscss.org/#-server-side-usage) tool).

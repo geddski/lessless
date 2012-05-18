@@ -7,7 +7,7 @@
 		"CSS",
 		"compile"
 	],
-  "version": "0.2.8",
+  "version": "0.2.9",
   "repository": {
     "type": "git",
     "url": "git://github.com/geddesign/lessless.git"
@@ -21,7 +21,8 @@
   },
   "dependencies": {
 	  "less":"1.x.x",
-	  "diveSync":"0.2.x"
+	  "diveSync":"0.2.x",
+    "optimist": "0.3.x"
   },
 	"devDependencies":{
 		"buster":"0.3.x"
