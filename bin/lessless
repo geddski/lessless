@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-var lessless = require('../lib/lessless')
-	// use the cwd if no path passed in as argument
-	, args = process.argv.slice(2)
-	, directory = args[0] || process.cwd();
-
-lessless.optimizeProject(directory);
-
+var lessless = require('../lib/lessless');
+var argv = require('optimist').argv;
+// use the cwd if no path passed in as argument
+lessless.optimizeProject(argv.directory || process.cwd(), argv.styledirs, argv.strip);
