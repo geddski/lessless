@@ -21,7 +21,8 @@
   },
   "dependencies": {
 	  "less":"1.x.x",
-	  "diveSync":"0.2.x"
+	  "diveSync":"0.2.x",
+    "optimist": "0.3.x"
   },
 	"devDependencies":{
 		"buster":"0.3.x"
