@@ -17,7 +17,7 @@
 		"lessless": "./bin/lessless"
 	},
   "engines": {
-    "node": "0.6.x"
+    "node": "0.x.x"
   },
   "dependencies": {
 	  "less":"1.x.x",
