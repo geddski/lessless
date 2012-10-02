@@ -18,27 +18,26 @@ describe('generating CSS from a LESS file', function() {
 
 	it('should create file', function() {
 		var file = fs.readFileSync("test/test.css");
-		// console.log("file: ", file);
 		expect(file).toBeDefined();
 	});
 });
 
-describe('specifying paths to CSS folders for less to lookup', function() {
-	before(function() {
-		var testfile = 'test/testpaths.less';
-		lessless.createCSS(testfile, ['test/mystyles']);
-	});
+// describe('//specifying paths to CSS folders for less to lookup', function() {
+	// before(function() {
+	//  var testfile = 'test/testpaths.less';
+	//  lessless.createCSS(testfile, ['test/mystyles']);
+	// });
 
-	after(function() {
-		fs.unlinkSync('test/testpaths.css');
-	});
+	// after(function() {
+	//  fs.unlinkSync('test/testpaths.css');
+	// });
 
-	it('should create CSS file, correctly finding the imported less file', function() {
+	// it('should create CSS file, correctly finding the imported less file', function() {
 		// var file = fs.readFileSync('test/testpaths.css');
 		// expect(file).toBeDefined();
-		expect(true).toEqual(true);
-	});
-});
+		// expect(true).toEqual(true);
+	// });
+// });
 
 describe('adjusting LESS links', function() {
 	var origHTML, testFile = "test/test.html";
