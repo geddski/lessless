@@ -7,7 +7,7 @@
 		"CSS",
 		"compile"
 	],
-  "version": "0.2.13",
+  "version": "0.2.14",
   "repository": {
     "type": "git",
     "url": "git://github.com/geddesign/lessless.git"
