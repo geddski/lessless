@@ -9,10 +9,14 @@
 ## Usage
 
 ### As Command Line Tool
-`lessless /path/to/project`
+```
+lessless --directory /path/to/project
+```
 OR
-`cd /path/to/project`
-`lessless`
+```
+cd /path/to/project
+lessless
+```
 
 ### As Module
 ```js
