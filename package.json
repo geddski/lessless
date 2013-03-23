@@ -1,5 +1,5 @@
 {
-  "author": "Dave Geddes <davidcgeddes@gmail.com> (http://geddesign.com)",
+  "author": "Dave Geddes <davidcgeddes@gmail.com> (http://geddski.com)",
   "name": "lessless",
   "description": "Compiles all your project's LESS into CSS, converts LESS <links> into regular CSS <links>, and removes less.js from your html page.",
 	"keywords":[
@@ -10,7 +10,7 @@
   "version": "0.2.14",
   "repository": {
     "type": "git",
-    "url": "git://github.com/geddesign/lessless.git"
+    "url": "git://github.com/geddski/lessless.git"
   },
   "main": "./lib/lessless",
 	"bin": {
